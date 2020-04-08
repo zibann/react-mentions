@@ -80,6 +80,7 @@ const propTypes = {
   onSelect: PropTypes.func,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
+  onChangeSuggestions: PropTypes.func,
   suggestionsPortalHost:
     typeof Element === 'undefined'
       ? PropTypes.any
