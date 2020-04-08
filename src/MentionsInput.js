@@ -158,6 +158,12 @@ class MentionsInput extends React.Component {
       this.setState({ setSelectionAfterMentionChange: false })
       this.setSelection(this.state.selectionStart, this.state.selectionEnd)
     }
+
+    if (this.state.suggestions !== this.prevState.suggestions) {
+      if (this.props.onChangeSuggestions) {
+        this.props.onChangeSuggestions(this.state.suggestions)
+      }
+    }
   }
 
   componentWillUnmount() {
